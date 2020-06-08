@@ -226,3 +226,13 @@ subscriptions=["POST_ADD_USER"]
 
 [service_provider]
 sp_name_regex = "^[\\sa-zA-Z0-9._-]*$"
+
+[synapse_properties]
+'synapse.global_timeout_interval'=300000
+
+[passthru_http]
+'http.socket.timeout'=480000
+
+
+
+
