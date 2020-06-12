@@ -165,6 +165,9 @@ function setup() {
     sudo -u $os_user mv -v $apim_dirname wso2am
     echo "API Manager is extracted"
 
+    # Tuning performance
+    sudo cp $script_dir/../apim/conf/sysctl.conf /etc/sysctl.conf
+
     # Configure WSO2 API Manager
     sudo -u $os_user $script_dir/../apim/configure.sh -m $mysql_host -u $mysql_user -p $mysql_password -c $mysql_connector_file
 
